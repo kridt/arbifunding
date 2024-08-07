@@ -1,6 +1,9 @@
-import React from "react";
+import { Skeleton } from "@mui/material";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 export default function SaleTop() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div className="gradient">
       <div
@@ -73,7 +76,19 @@ export default function SaleTop() {
 
         <div>
           <div>
-            <img src="https://via.placeholder.com/579x739" alt="" />
+            <img
+              onLoad={() => setLoading(false)}
+              src="https://picsum.photos/579/739?random=1"
+              alt="img"
+            />
+            {loading && (
+              <Skeleton
+                variant="rectangular"
+                animation="wave"
+                width={579}
+                height={720}
+              />
+            )}
           </div>
           <div>
             <h1>56%</h1>
