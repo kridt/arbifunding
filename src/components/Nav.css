@@ -1,0 +1,48 @@
+nav {
+  color: white;
+  display: flex;
+  margin: 2em 19em;
+}
+nav a {
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: #2d66f8;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  font-size: large;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#getInTouch {
+  background-color: #2d66f8;
+  padding: 1.5em 2.5em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#getInTouch:hover {
+  background-color: #1e4bb8;
+  color: #000;
+}
