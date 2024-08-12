@@ -13,6 +13,8 @@ export default function ContactForm() {
         "New message from your website arbiFunding from " +
         formData.get("name"),
       message: formData.get("message") + " from " + formData.get("email"),
+      from_name: "arbiFunding",
+      reply_to: formData.get("email"),
     };
 
     emailjs
