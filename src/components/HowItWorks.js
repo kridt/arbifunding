@@ -2,11 +2,18 @@ import React from "react";
 
 export default function HowItWorks() {
   return (
-    <div className="gradient">
+    <div
+      style={{
+        paddingBottom: "50px",
+      }}
+      className="gradient"
+    >
       <p
         style={{
           textAlign: "center",
           textTransform: "uppercase",
+          paddingTop: "20px",
+          fontWeight: "lighter",
         }}
       >
         How it works
@@ -18,6 +25,7 @@ export default function HowItWorks() {
             textAlign: "center",
             fontSize: "4em",
             fontWeight: "bold",
+            lineHeight: ".5em",
           }}
         >
           Step-by-step look at our <span className="blueWord">approach</span>
@@ -56,7 +64,14 @@ export default function HowItWorks() {
               textAlign: "left",
             }}
           >
-            <img src="/img/breadcrumb.png" alt="breadcrumb" />
+            <img
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              src="/img/breadcrumb.png"
+              alt="breadcrumb"
+            />
           </div>
           <div
             className="howItWorks-info"

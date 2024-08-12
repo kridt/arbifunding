@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import HowItWorks from "./components/HowItWorks";
 import Nav from "./components/Nav";
 import SaleTop from "./components/SaleTop";
+import Results from "./components/Results";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   /* const [stats, setStats] = useState({});
@@ -37,19 +38,19 @@ function App() {
       <br />
       <br />
       <div id="results">
-        <h1>Results</h1>
+        <Results />
       </div>
       <br />
       <br />
       <br />
-      <div id="testimonials">
+      {/* <div id="testimonials">
         <h1>Testimonials</h1>
-      </div>
+      </div> */}
       <br />
       <br />
       <br />
       <div id="get-in-touch">
-        <h1>Get in touch</h1>
+        <ContactForm />
       </div>
     </div>
   );

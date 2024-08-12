@@ -6,7 +6,9 @@ import "./Nav.css";
 export default function Nav() {
   return (
     <nav>
-      <h1>Logo</h1>
+      <div>
+        <img src="/img/logo.png" alt="logo" />
+      </div>
       <ul>
         <div className="links">
           <li>
@@ -22,11 +24,11 @@ export default function Nav() {
               Results
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="testimonials" smooth={true} duration={500}>
               Testimonials
             </Link>
-          </li>
+          </li> */}
         </div>
         <div>
           <Link id="getInTouch" to="get-in-touch" smooth={true} duration={500}>

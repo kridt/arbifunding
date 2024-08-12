@@ -1,0 +1,60 @@
+.container {
+  position: relative;
+  width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.investment-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #1b1b1b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.stats {
+  color: #fff;
+}
+
+.percentage {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .overlay {
+    bottom: 10px;
+    left: 10px;
+    padding: 10px;
+  }
+
+  .percentage {
+    font-size: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}

@@ -1,15 +1,17 @@
 import { Skeleton } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import "./SaleTop.css";
 export default function SaleTop() {
-  const [loading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState(false);
+  const [percentIncrease, setPercentIncrease] = useState(52);
   return (
     <div className="gradient">
       <div
         style={{
           display: "flex",
           justifyContent: "space-evenly",
+          paddingTop: "5em",
         }}
         className="sales"
       >
@@ -74,13 +76,52 @@ export default function SaleTop() {
           </div>
         </div>
 
-        <div>
+        <div style={{ paddingTop: "2em" }}>
           <div>
-            <img
-              onLoad={() => setLoading(false)}
-              src="https://picsum.photos/579/739?random=1"
-              alt="img"
-            />
+            <div>
+              <div
+                style={{
+                  maxWidth: "579px",
+                }}
+              >
+                <img src="/img/Vector 1.png" alt="back" />
+              </div>
+              <div
+                style={{
+                  height: "100px",
+                }}
+              >
+                <h1
+                  style={{
+                    zIndex: "1000",
+                    position: "relative",
+                    bottom: "200px",
+                    left: "20px",
+                  }}
+                >
+                  {percentIncrease}%
+                  <br />
+                  <span
+                    style={{
+                      fontSize: "1rem",
+                      fontWeight: "lighter",
+                      lineHeight: "1.5em",
+                      color: "#fff",
+                    }}
+                  >
+                    Increase in returns since <br /> 9. June 2024
+                  </span>
+                </h1>
+                <img
+                  style={{
+                    position: "relative",
+                    bottom: "378px",
+                  }}
+                  src="/img/Vector 2.png"
+                  alt="front"
+                />
+              </div>
+            </div>
             {loading && (
               <Skeleton
                 variant="rectangular"
@@ -89,10 +130,6 @@ export default function SaleTop() {
                 height={720}
               />
             )}
-          </div>
-          <div>
-            <h1>56%</h1>
-            <p>Increase in returns since 9. June 2024</p>
           </div>
         </div>
       </div>
