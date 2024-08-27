@@ -5,34 +5,7 @@ import emailjs from "emailjs-com";
 export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-
-    const templateParams = {
-      to_name: formData.get("name"),
-      subject:
-        "New message from your website arbiFunding from " +
-        formData.get("name"),
-      message: formData.get("message") + " from " + formData.get("email"),
-      from_name: "arbiFunding",
-      reply_to: formData.get("email"),
-    };
-
-    emailjs
-      .send(
-        "service_ur52gfn",
-        "template_xks9xsp",
-        templateParams,
-        "0nDd8UpcZnJ6z1LWJ"
-      )
-      .then(
-        (response) => {
-          alert("Thank you for your message. We will get back to you soon.");
-          window.location.reload();
-        },
-        (error) => {
-          alert("error trying to handle your message " + error.text);
-        }
-      );
+    
   };
   return (
     <div className="gradient">
